@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="search" model="ir.ui.view">
+            <field name="name">fts_mail.search</field>
+            <field name="model">fts.proxy</field>
+            <field name="type">search</field>
+            <field name="inherit_id" ref="fts_base.search" />
+            <field name="arch" type="xml">
+                    <xpath expr="//field[@name='text']" position="before">
+                        <filter string="Emails" domain="[('model', '=', 'mail.message')]" icon="terp-mail-message-new" />
+                    </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

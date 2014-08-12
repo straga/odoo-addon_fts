@@ -1,0 +1,89 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* fts_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-28 07:02+0000\n"
+"PO-Revision-Date: 2012-08-28 07:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fts_base
+#: view:fts.proxy:0
+msgid "Fulltext search - results"
+msgstr "Fulltext search - results"
+
+#. module: fts_base
+#: model:ir.model,name:fts_base.model_fts_proxy
+msgid "fts.proxy"
+msgstr "fts.proxy"
+
+#. module: fts_base
+#: field:fts.proxy,text:0
+msgid "Searchstring"
+msgstr "Searchstring"
+
+#. module: fts_base
+#: field:fts.proxy,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: fts_base
+#: view:fts.proxy:0
+msgid "Open document"
+msgstr "Open document"
+
+#. module: fts_base
+#: view:fts.proxy:0
+msgid "With summary (slower)"
+msgstr "With summary (slower)"
+
+#. module: fts_base
+#: field:fts.proxy,rank:0
+msgid "Rank"
+msgstr "Rank"
+
+#. module: fts_base
+#: view:fts.proxy:0
+msgid "Preview document"
+msgstr "Preview document"
+
+#. module: fts_base
+#: field:fts.proxy,summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: fts_base
+#: view:fts.proxy:0
+#: model:ir.actions.act_window,name:fts_base.action_search_tree
+#: model:ir.ui.menu,name:fts_base.menu_search
+msgid "Fulltext search"
+msgstr "Fulltext search"
+
+#. module: fts_base
+#: field:fts.proxy,model:0
+msgid "Model"
+msgstr "Model"
+
+#. module: fts_base
+#: field:fts.proxy,res_id:0
+msgid "Res ID"
+msgstr "Res ID"
+
+#. module: fts_base
+#: field:fts.proxy,model_name:0
+msgid "Type"
+msgstr "Type"
+
+#. module: fts_base
+#: view:fts.proxy:0
+msgid "Options"
+msgstr "Options"
+

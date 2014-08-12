@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="search" model="ir.ui.view">
+            <field name="name">fts_project.search</field>
+            <field name="model">fts.proxy</field>
+            <field name="type">search</field>
+            <field name="inherit_id" ref="fts_base.search" />
+            <field name="arch" type="xml">
+                    <xpath expr="//field[@name='text']" position="before">
+                        <filter string="Analytic Accounts" domain="[('model', '=', 'account.analytic.account')]" icon="terp-project" />
+                        <filter string="Tasks" domain="[('model', '=', 'project.task')]" icon="terp-folder-blue" /> <!-- TODO: better icon -->
+                    </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="search" model="ir.ui.view">
+            <field name="name">fts_proxy.search</field>
+            <field name="model">fts.proxy</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Fulltext search">
+                    <field name="text" />
+                    <group expand="0" string="Options">
+                        <filter string="With summary (slower)" context="{'fts_summary': True}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="search_proxy_tree" model="ir.ui.view">
+            <field name="name">fts_proxy.tree</field>
+            <field name="model">fts.proxy</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Fulltext search - results" create="false" delete="false" edit="false">
+                    <field name="name" />
+                    <field name="summary" invisible="not context.get('fts_summary')" />
+                    <field name="model_name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_search_tree" model="ir.actions.act_window">
+            <field name="name">Fulltext search</field>
+            <field name="res_model">fts.proxy</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{}</field>
+            <field name="auto_search" eval="False" />
+            <field name="view_id" ref="search_proxy_tree" />
+            <field name="search_view_id" ref="search" />
+        </record>
+
+        <menuitem action="action_search_tree" id="menu_search"
+            web_icon="images/fulltextsearch.png"
+            web_icon_hover="images/fulltextsearch-hover.png"/>
+    </data>
+</openerp>

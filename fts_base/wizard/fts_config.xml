@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="action_fts_config" model="ir.actions.act_window">
+            <field name="name">Fulltextsearch configuration</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">fts.config</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem action="action_fts_config" id="menu_fts_config" parent="base.menu_config" />
+    </data>
+</openerp>
