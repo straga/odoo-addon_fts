@@ -33,7 +33,7 @@ Note that this module by itself does nothing. To actually do searches, install
 at least one of the other fts_* modules, which enable searching for their
 respective object types.""",
     "init_xml": [],
-    'data': ["fts_proxy.xml", 'wizard/fts_config.xml', 'view/fts_base.xml'],
+    'data': ["fts_proxy.xml", 'wizard/fts_config.xml', 'views/fts_base.xml'],
     'demo_xml': [],
 
     'installable': True,
