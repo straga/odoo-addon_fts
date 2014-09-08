@@ -37,7 +37,7 @@ class fts_base_meta(type):
         super(fts_base_meta, self).__init__(name, bases, attrs)
 
     def _register(self):
-        cr = self.pool.db.cursor()
+        cr = self.pool.cursor()
         cls=self(self.pool, cr)
         if cls._replace_base:
             for base in bases:
@@ -299,13 +299,13 @@ class fts_base(object):
             """
             id,
             ts_rank(%(tsvector_column)s,
-                to_tsquery('%(language)s', %%(searchstring)s)),
+                plainto_tsquery('%(language)s', %%(searchstring)s)),
             %(title_column)s,
             """ +
                 (
                 """
                 ts_headline('%(language)s', %(indexed_column)s,  
-                    to_tsquery('%(language)s', %%(searchstring)s),
+                    plainto_tsquery('%(language)s', %%(searchstring)s),
                     'StartSel = *, StopSel = *')"""
                 if context.get('fts_summary')
                 else 'null'
@@ -317,7 +317,7 @@ class fts_base(object):
             ) +
             """
             FROM %(table)s WHERE %(tsvector_column)s @@ 
-                to_tsquery('%(language)s', %%(searchstring)s)"""
+                plainto_tsquery('%(language)s', %%(searchstring)s)"""
         ) %
         {
                'tsvector_column': self._tsvector_column,

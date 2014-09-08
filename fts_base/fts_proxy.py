@@ -102,7 +102,7 @@ class fts_proxy(TransientModel):
 
         if not context.get('fts_no_syntax_check') and not offset and not count:
             try:
-                cr.execute("select to_tsquery('pg_catalog.simple', %s)", (searchstring,))
+                cr.execute("select plainto_tsquery('pg_catalog.simple', %s)", (searchstring,))
             except psycopg2.ProgrammingError:
                 raise except_orm(_('Error'), 
                         _('You filled in an invalid searchstring!'))
