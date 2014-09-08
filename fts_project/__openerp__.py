@@ -35,7 +35,7 @@ accounts.
 This module also enables search in name, description and notes of project
 tasks.""",
     "init_xml": [],
-    'update_xml': ['fts_project.xml'],
+    'data': ['fts_project.xml'],
     'demo_xml': [],
     'installable': True,
     'active': False,

@@ -34,7 +34,7 @@ module, you should also install the knowledge module which provides automatic
 indexing of attachments.
 """,
     "init_xml": [],
-    'update_xml': ['fts_document.xml'],
+    'data': ['fts_document.xml'],
     'demo_xml': [],
     'installable': True,
     'active': False,
