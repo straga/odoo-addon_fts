@@ -38,18 +38,18 @@ openerp.fts_base = function(openerp)
             {
                 var self = this;
                 this.dataset.read_ids(
-                    this.dataset.ids[index],
+                    [this.dataset.ids[index]],
                     ['model', 'res_id', 'name'])
                 .then(function(row)
                     {
                         self.do_action({
                             type: 'ir.actions.act_window',
-                            name: row.name,
-                            res_model: row.model,
+                            name: row[0].name,
+                            res_model: row[0].model,
                             target: 'current',
-                            //TODO: decide if we want a popup or breadcrumb. the latter i think
+                            //TODO: decide if we want a popup or breadcrumb. the latter i think ik
                             //target: 'new',
-                            res_id: row.res_id,
+                            res_id: row[0].res_id,
                             views: [[false, 'form']],
                             flags: {
                                 'initial_mode': 'view',

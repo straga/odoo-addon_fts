@@ -37,7 +37,7 @@ class fts_base_meta(type):
         super(fts_base_meta, self).__init__(name, bases, attrs)
 
     def _register(self):
-        cr = self.pool.cursor()
+        cr = self.pool.db.cursor()
         cls=self(self.pool, cr)
         if cls._replace_base:
             for base in bases:
@@ -124,8 +124,8 @@ class fts_base(object):
         if not self._tsvector_column_trigger:
             self._tsvector_column_trigger = self._tsvector_column + '_trigger'
 
-        self._tsconfig=pool.get('ir.config_parameter').get_param(cr, 
-                SUPERUSER_ID, 'fts_'+self._model+'_tsconfig', 
+        self._tsconfig=pool.get('ir.config_parameter').get_param(cr,
+                SUPERUSER_ID, 'fts_'+self._model+'_tsconfig',
                 pool.get('ir.config_parameter').get_param(cr, SUPERUSER_ID,
                     'fts_base_tsconfig', self._tsconfig))
 

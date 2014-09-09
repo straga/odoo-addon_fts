@@ -33,7 +33,7 @@ Searches the fields name, city, street, street2, mobile, phone and comment
 simulatenously.
     """,
     "init_xml": [],
-    'data': ['fts_address.xml'],
+    'update_xml': ['fts_address.xml'],
     'demo_xml': [],
     'installable': True,
     'active': False,

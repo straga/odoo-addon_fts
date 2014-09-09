@@ -31,7 +31,7 @@ Fulltext search for eMails
 
 Search the content of system messages and emails.""",
     "init_xml": [],
-    'data': ['fts_mail.xml'],
+    'update_xml': ['fts_mail.xml'],
     'demo_xml': [],
     'installable': True,
     'active': False,

@@ -31,7 +31,7 @@ Fulltext search for Project Issues
 
 Search content and names of issues.""",
     "init_xml": [],
-    'data': ['fts_project_issue.xml'],
+    'update_xml': ['fts_project_issue.xml'],
     'demo_xml': [],
     'installable': True,
     'active': False,
