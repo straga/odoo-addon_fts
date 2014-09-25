@@ -1,6 +1,10 @@
 odoo-addon_fts
 ==============
 
+It Fix for Odoo 8.0 work after install.
+
+
+
 Provides an extensible framework for OpenERP to do full text search (using PostgreSQL's full text search mechanism) 
 on different models. It aims at least possible administration effort while still providing fast and high 
 quality search results for users. The modular design enables administrators 
